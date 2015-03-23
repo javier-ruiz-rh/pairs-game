@@ -1,0 +1,59 @@
+@import '../lib/breakpoints';
+@import '../lib/font-face';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+header {
+  text-align: center;
+  margin-top: 10px;
+  height: 50px;
+}
+
+.container {
+  width: 285px;
+  margin: 0px auto;
+  position: relative;
+
+  @include at-small {
+    width: 550px;
+  }
+  @include at-medium {
+    width: 810px;
+  }
+
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  opacity: .6;
+}
+
+.button {
+  margin: 0px -88px;
+  padding: 20px 50px;
+  background-color: orange;
+  color: white;
+  border-radius: 15px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  z-index: 3;
+}
+
+@include font-face('TheMillion', 'The_Million_Mile_Man');
+
+//my-font
+.my-font{
+  font-family: 'TheMillion';
+}
+

@@ -1,0 +1,90 @@
+/**
+ * MM Breakpoints v1.2
+ * Manu Morante @unavezfui
+ * Last update: 15/12/2014
+ * http://codepen.io/unavezfui/pen/udByq
+ *
+ * Usage
+ * .col {
+ *   width: 100%;
+ *   @include at-small{
+ *     width: 50%;
+ *   }
+ }
+ */
+
+@mixin bp($hor: false, $ver: false, $only: false) {
+
+  // Horizontal and Vertical Breakpoints (Bootstrap standard, mobile first)
+  $media: (
+    hxs: 480px, hsm: 768px, hmd: 992px, hlg: 1200px,
+    vxs: 300px, vsm: 480px, vmd: 620px, vlg: 750px
+  );
+
+  $media_hor: map-get($media, "h#{$hor}");
+  $media_ver: map-get($media, "v#{$ver}");
+
+  // Only
+  @if $only {
+    @if $hor==xs{
+      @media (max-width: map-get($media, "hsm")-1px) { @content; }
+    } @else if $hor==sm{
+      @media (min-width:  map-get($media, "hsm")) and (max-width: map-get($media, "hmd")-1px) { @content; }
+    } @else if $hor==md{
+      @media (min-width:  map-get($media, "hmd")) and (max-width: map-get($media, "hlg")-1px) { @content; }
+    } @else if $hor==lg{
+      @media (min-width:  map-get($media, "hlg")) { @content; }
+    }
+  }
+  // Horizontal and Vertical
+  @else if $hor and $ver {
+    @media (min-width:  $media_hor) and (min-height: $media_ver) { @content; }
+  }
+  // Horizontal
+  @else if $hor {
+    @media (min-width:  $media_hor) { @content; }
+  }
+  // Vertical
+  @else if $ver {
+    @media (min-height: $media_ver) { @content; }
+  }
+}
+
+// Horizontal (default)
+@mixin at-xsmall        {@include bp(xs)       { @content; }}
+@mixin at-small         {@include bp(sm)       { @content; }}
+@mixin at-medium        {@include bp(md)       { @content; }}
+@mixin at-large         {@include bp(lg)       { @content; }}
+
+// Vertical
+@mixin at-xsmall-h      {@include bp(false,xs) { @content; }}
+@mixin at-small-h       {@include bp(false,sm) { @content; }}
+@mixin at-medium-h      {@include bp(false,md) { @content; }}
+@mixin at-large-h       {@include bp(false,lg) { @content; }}
+
+// And
+@mixin at-xsmall-xsmall {@include bp(xs,xs)    { @content; }}
+@mixin at-xsmall-small  {@include bp(xs,sm)    { @content; }}
+@mixin at-xsmall-medium {@include bp(xs,md)    { @content; }}
+@mixin at-xsmall-large  {@include bp(xs,lg)    { @content; }}
+
+@mixin at-small-xsmall  {@include bp(sm,xs)    { @content; }}
+@mixin at-small-small   {@include bp(sm,sm)    { @content; }}
+@mixin at-small-medium  {@include bp(sm,md)    { @content; }}
+@mixin at-small-large   {@include bp(sm,lg)    { @content; }}
+
+@mixin at-medium-xsmall {@include bp(md,xs)    { @content; }}
+@mixin at-medium-small  {@include bp(md,sm)    { @content; }}
+@mixin at-medium-medium {@include bp(md,md)    { @content; }}
+@mixin at-medium-large  {@include bp(md,lg)    { @content; }}
+
+@mixin at-large-xsmall  {@include bp(lg,xs)    { @content; }}
+@mixin at-large-small   {@include bp(lg,sm)    { @content; }}
+@mixin at-large-medium  {@include bp(lg,md)    { @content; }}
+@mixin at-large-large   {@include bp(lg,lg)    { @content; }}
+
+// Only
+@mixin only-xsmall        {@include bp(xs,false,true)    { @content; }}
+@mixin only-small         {@include bp(sm,false,true)    { @content; }}
+@mixin only-medium        {@include bp(md,false,true)    { @content; }}
+@mixin only-large         {@include bp(lg,false,true)    { @content; }}

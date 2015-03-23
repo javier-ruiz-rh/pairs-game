@@ -1,0 +1,127 @@
+/**
+ *
+ */
+/* line 5, ../../sass/ui/color-cards.scss */
+.front {
+  background-color: black;
+}
+
+/* line 9, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='1'] .back {
+  background-color: red;
+}
+
+/* line 13, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='2'] .back {
+  background-color: orange;
+}
+
+/* line 17, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='3'] .back {
+  background-color: deepskyblue;
+}
+
+/* line 21, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='4'] .back {
+  background-color: green;
+}
+
+/* line 25, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='5'] .back {
+  background-color: yellow;
+}
+
+/* line 29, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='6'] .back {
+  background-color: magenta;
+}
+
+/* line 33, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='7'] .back {
+  background-color: blue;
+}
+
+/* line 37, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='8'] .back {
+  background-color: blueviolet;
+}
+
+/* line 41, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='9'] .back {
+  background-color: yellowgreen;
+}
+
+/* line 45, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='10'] .back {
+  background-color: rosybrown;
+}
+
+/* line 49, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='11'] .back {
+  background-color: brown;
+}
+
+/* line 53, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='12'] .back {
+  background-color: cadetblue;
+}
+
+/* line 57, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='13'] .back {
+  background-color: blanchedalmond;
+}
+
+/* line 61, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='14'] .back {
+  background-color: grey;
+}
+
+/* line 65, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='15'] .back {
+  background-color: darkseagreen;
+}
+
+/* line 69, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='16'] .back {
+  background-color: indianred;
+}
+
+/* line 73, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='17'] .back {
+  background-color: powderblue;
+}
+
+/* line 77, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='18'] .back {
+  background-color: darkslateblue;
+}
+
+/* line 81, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='19'] .back {
+  background-color: dodgerblue;
+}
+
+/* line 85, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='20'] .back {
+  background-color: darksalmon;
+}
+
+/* line 89, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='21'] .back {
+  background-color: mediumspringgreen;
+}
+
+/* line 93, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='22'] .back {
+  background-color: darkolivegreen;
+}
+
+/* line 97, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='23'] .back {
+  background-color: mistyrose;
+}
+
+/* line 101, ../../sass/ui/color-cards.scss */
+.flip-container[data-card='24'] .back {
+  background-color: cornflowerblue;
+}

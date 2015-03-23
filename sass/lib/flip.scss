@@ -1,0 +1,40 @@
+@import "compass/css3";
+
+.flip-container, .front, .back {
+  box-sizing: border-box;
+}
+
+.flipper {
+  position: relative;
+}
+
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  backface-visibility: hidden;
+  transition: 0.3s;
+  border: 1px solid black;
+}
+
+.back {
+  @include transform( rotateY(-180deg));
+}
+
+.flip-container.visible .back, .flip-container.hover .back {
+  @include transform( rotateY(0deg));
+}
+
+.flip-container.visible .front, .flip-container.hover .front {
+ @include transform(rotateY(180deg));
+}
+
+.front {
+  z-index: 2;
+}
+
+

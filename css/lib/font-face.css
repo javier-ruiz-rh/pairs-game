@@ -1,0 +1,16 @@
+/**
+ * Font-face Mixin
+ * --------------------------------------
+ * Manu Morante @unavezfui
+ * Last update: February 05, 2015
+ * https://gist.github.com/manumorante/0b133a10ea2976f483ef
+ *
+ * Requires
+ * This mixin require 'Compass' to use the 'font-url' helper.
+ * You can change 'font-url()' to 'url()' to avoid it.
+ *
+ * Usage
+ * h1 {
+ *   @include font-face('Roboto','myfont/roboto');
+ * }
+ */

@@ -1,0 +1,99 @@
+/**
+ * MM Breakpoints v1.2
+ * Manu Morante @unavezfui
+ * Last update: 15/12/2014
+ * http://codepen.io/unavezfui/pen/udByq
+ *
+ * Usage
+ * .col {
+ *   width: 100%;
+ *   @include at-small{
+ *     width: 50%;
+ *   }
+ }
+ */
+/**
+ * Font-face Mixin
+ * --------------------------------------
+ * Manu Morante @unavezfui
+ * Last update: February 05, 2015
+ * https://gist.github.com/manumorante/0b133a10ea2976f483ef
+ *
+ * Requires
+ * This mixin require 'Compass' to use the 'font-url' helper.
+ * You can change 'font-url()' to 'url()' to avoid it.
+ *
+ * Usage
+ * h1 {
+ *   @include font-face('Roboto','myfont/roboto');
+ * }
+ */
+/* line 4, ../../sass/ui/page.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/* line 10, ../../sass/ui/page.scss */
+header {
+  text-align: center;
+  margin-top: 10px;
+  height: 50px;
+}
+
+/* line 16, ../../sass/ui/page.scss */
+.container {
+  width: 285px;
+  margin: 0px auto;
+  position: relative;
+}
+@media (min-width: 768px) {
+  /* line 16, ../../sass/ui/page.scss */
+  .container {
+    width: 550px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 16, ../../sass/ui/page.scss */
+  .container {
+    width: 810px;
+  }
+}
+
+/* line 30, ../../sass/ui/page.scss */
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  opacity: .6;
+}
+
+/* line 41, ../../sass/ui/page.scss */
+.button {
+  margin: 0px -88px;
+  padding: 20px 50px;
+  background-color: orange;
+  color: white;
+  border-radius: 15px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  z-index: 3;
+}
+
+@font-face {
+  font-family: "TheMillion";
+  src: url('../../fonts/The_Million_Mile_Man.eot');
+  src: url('../../fonts/The_Million_Mile_Man.eot?#iefix') format("embedded-opentype"), url('../../fonts/The_Million_Mile_Man.woff2') format("woff2"), url('../../fonts/The_Million_Mile_Man.woff') format("woff"), url('../../fonts/The_Million_Mile_Man.ttf?1423493762') format("truetype"), url('../../fonts/The_Million_Mile_Man.svg#The_Million_Mile_Man') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 56, ../../sass/ui/page.scss */
+.my-font {
+  font-family: 'TheMillion';
+}

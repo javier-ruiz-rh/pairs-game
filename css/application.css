@@ -1,0 +1,480 @@
+/**
+ * application.scss
+ */
+/* line 5, ../../../../.rvm/gems/ruby-1.8.7-p371/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-1.8.7-p371/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../.rvm/gems/ruby-1.8.7-p371/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../.rvm/gems/ruby-1.8.7-p371/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../.rvm/gems/ruby-1.8.7-p371/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../.rvm/gems/ruby-1.8.7-p371/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../.rvm/gems/ruby-1.8.7-p371/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../.rvm/gems/ruby-1.8.7-p371/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../.rvm/gems/ruby-1.8.7-p371/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 3, ../sass/lib/flip.scss */
+.flip-container, .front, .back {
+  box-sizing: border-box;
+}
+
+/* line 7, ../sass/lib/flip.scss */
+.flipper {
+  position: relative;
+}
+
+/* line 11, ../sass/lib/flip.scss */
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: 0.3s;
+  border: 1px solid black;
+}
+
+/* line 24, ../sass/lib/flip.scss */
+.back {
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+/* line 28, ../sass/lib/flip.scss */
+.flip-container.visible .back, .flip-container.hover .back {
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+/* line 32, ../sass/lib/flip.scss */
+.flip-container.visible .front, .flip-container.hover .front {
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+/* line 36, ../sass/lib/flip.scss */
+.front {
+  z-index: 2;
+}
+
+/**
+ * MM Breakpoints v1.2
+ * Manu Morante @unavezfui
+ * Last update: 15/12/2014
+ * http://codepen.io/unavezfui/pen/udByq
+ *
+ * Usage
+ * .col {
+ *   width: 100%;
+ *   @include at-small{
+ *     width: 50%;
+ *   }
+ }
+ */
+/**
+ * Font-face Mixin
+ * --------------------------------------
+ * Manu Morante @unavezfui
+ * Last update: February 05, 2015
+ * https://gist.github.com/manumorante/0b133a10ea2976f483ef
+ *
+ * Requires
+ * This mixin require 'Compass' to use the 'font-url' helper.
+ * You can change 'font-url()' to 'url()' to avoid it.
+ *
+ * Usage
+ * h1 {
+ *   @include font-face('Roboto','myfont/roboto');
+ * }
+ */
+/* line 4, ../sass/ui/page.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/* line 10, ../sass/ui/page.scss */
+header {
+  text-align: center;
+  margin-top: 10px;
+  height: 50px;
+}
+
+/* line 16, ../sass/ui/page.scss */
+.container {
+  width: 285px;
+  margin: 0px auto;
+  position: relative;
+}
+@media (min-width: 768px) {
+  /* line 16, ../sass/ui/page.scss */
+  .container {
+    width: 550px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 16, ../sass/ui/page.scss */
+  .container {
+    width: 810px;
+  }
+}
+
+/* line 30, ../sass/ui/page.scss */
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  opacity: .6;
+}
+
+/* line 41, ../sass/ui/page.scss */
+.button {
+  margin: 0px -88px;
+  padding: 20px 50px;
+  background-color: orange;
+  color: white;
+  border-radius: 15px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  z-index: 3;
+}
+
+@font-face {
+  font-family: "TheMillion";
+  src: url('../fonts/The_Million_Mile_Man.eot');
+  src: url('../fonts/The_Million_Mile_Man.eot?#iefix') format("embedded-opentype"), url('../fonts/The_Million_Mile_Man.woff2') format("woff2"), url('../fonts/The_Million_Mile_Man.woff') format("woff"), url('../fonts/The_Million_Mile_Man.ttf?1423493762') format("truetype"), url('../fonts/The_Million_Mile_Man.svg#The_Million_Mile_Man') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 56, ../sass/ui/page.scss */
+.my-font {
+  font-family: 'TheMillion';
+}
+
+/**
+ *
+ */
+/* line 5, ../sass/ui/color-cards.scss */
+.front {
+  background-color: black;
+}
+
+/* line 9, ../sass/ui/color-cards.scss */
+.flip-container[data-card='1'] .back {
+  background-color: red;
+}
+
+/* line 13, ../sass/ui/color-cards.scss */
+.flip-container[data-card='2'] .back {
+  background-color: orange;
+}
+
+/* line 17, ../sass/ui/color-cards.scss */
+.flip-container[data-card='3'] .back {
+  background-color: deepskyblue;
+}
+
+/* line 21, ../sass/ui/color-cards.scss */
+.flip-container[data-card='4'] .back {
+  background-color: green;
+}
+
+/* line 25, ../sass/ui/color-cards.scss */
+.flip-container[data-card='5'] .back {
+  background-color: yellow;
+}
+
+/* line 29, ../sass/ui/color-cards.scss */
+.flip-container[data-card='6'] .back {
+  background-color: magenta;
+}
+
+/* line 33, ../sass/ui/color-cards.scss */
+.flip-container[data-card='7'] .back {
+  background-color: blue;
+}
+
+/* line 37, ../sass/ui/color-cards.scss */
+.flip-container[data-card='8'] .back {
+  background-color: blueviolet;
+}
+
+/* line 41, ../sass/ui/color-cards.scss */
+.flip-container[data-card='9'] .back {
+  background-color: yellowgreen;
+}
+
+/* line 45, ../sass/ui/color-cards.scss */
+.flip-container[data-card='10'] .back {
+  background-color: rosybrown;
+}
+
+/* line 49, ../sass/ui/color-cards.scss */
+.flip-container[data-card='11'] .back {
+  background-color: brown;
+}
+
+/* line 53, ../sass/ui/color-cards.scss */
+.flip-container[data-card='12'] .back {
+  background-color: cadetblue;
+}
+
+/* line 57, ../sass/ui/color-cards.scss */
+.flip-container[data-card='13'] .back {
+  background-color: blanchedalmond;
+}
+
+/* line 61, ../sass/ui/color-cards.scss */
+.flip-container[data-card='14'] .back {
+  background-color: grey;
+}
+
+/* line 65, ../sass/ui/color-cards.scss */
+.flip-container[data-card='15'] .back {
+  background-color: darkseagreen;
+}
+
+/* line 69, ../sass/ui/color-cards.scss */
+.flip-container[data-card='16'] .back {
+  background-color: indianred;
+}
+
+/* line 73, ../sass/ui/color-cards.scss */
+.flip-container[data-card='17'] .back {
+  background-color: powderblue;
+}
+
+/* line 77, ../sass/ui/color-cards.scss */
+.flip-container[data-card='18'] .back {
+  background-color: darkslateblue;
+}
+
+/* line 81, ../sass/ui/color-cards.scss */
+.flip-container[data-card='19'] .back {
+  background-color: dodgerblue;
+}
+
+/* line 85, ../sass/ui/color-cards.scss */
+.flip-container[data-card='20'] .back {
+  background-color: darksalmon;
+}
+
+/* line 89, ../sass/ui/color-cards.scss */
+.flip-container[data-card='21'] .back {
+  background-color: mediumspringgreen;
+}
+
+/* line 93, ../sass/ui/color-cards.scss */
+.flip-container[data-card='22'] .back {
+  background-color: darkolivegreen;
+}
+
+/* line 97, ../sass/ui/color-cards.scss */
+.flip-container[data-card='23'] .back {
+  background-color: mistyrose;
+}
+
+/* line 101, ../sass/ui/color-cards.scss */
+.flip-container[data-card='24'] .back {
+  background-color: cornflowerblue;
+}
+
+/**
+ * Panel Info
+ */
+/* line 8, ../sass/ui/panel-info.scss */
+.panel-info {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  margin: -100px -140px;
+  padding: 10px;
+  width: 250px;
+  height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  border: solid 2px #ccc;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  /* line 8, ../sass/ui/panel-info.scss */
+  .panel-info {
+    margin: -90px -152px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 8, ../sass/ui/panel-info.scss */
+  .panel-info {
+    margin: -90px -150px;
+  }
+}
+/* line 30, ../sass/ui/panel-info.scss */
+.panel-info p span {
+  font-size: 35px;
+}
+/* line 34, ../sass/ui/panel-info.scss */
+.panel-info h1 {
+  padding: 17px 10px;
+  font-size: 24px;
+}
+/* line 39, ../sass/ui/panel-info.scss */
+.panel-info a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  background-color: orange;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/**
+ * time.scss
+ */
+/* line 5, ../sass/ui/time.scss */
+.time {
+  display: none;
+}
+
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on November 26, 2014 */
+/* line 10, ../sass/ui/time.scss */
+#cronometro {
+  display: none;
+  text-align: center;
+}
+
+/* line 15, ../sass/ui/time.scss */
+#reloj {
+  margin: 4px;
+  padding: 5px 10px;
+  background-color: white;
+  border: 4px solid #ccc;
+  font-family: arial, helvetica, sans-serif;
+  text-align: center;
+  font-size: 20px;
+}
+
+/**
+ * card-game.scss
+ */
+/* line 8, ../sass/ui/card-game.scss */
+.flip-container {
+  display: inline-block;
+  margin: 0px 2px 0px 0px;
+  width: 45px;
+  height: 45px;
+}
+@media (min-width: 768px) {
+  /* line 8, ../sass/ui/card-game.scss */
+  .flip-container {
+    margin: 0px 5px 5px 0px;
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 8, ../sass/ui/card-game.scss */
+  .flip-container {
+    margin: 0px 5px 5px 0px;
+    width: 95px;
+    height: 95px;
+  }
+}
+
+/* line 25, ../sass/ui/card-game.scss */
+.back, .front {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  -moz-box-shadow: 0px 5px 5px -2px #707070;
+  -webkit-box-shadow: 0px 5px 5px -2px #707070;
+  box-shadow: 0px 5px 5px -2px #707070;
+}
+@media (min-width: 768px) {
+  /* line 25, ../sass/ui/card-game.scss */
+  .back, .front {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 25, ../sass/ui/card-game.scss */
+  .back, .front {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+/* line 41, ../sass/ui/card-game.scss */
+.back {
+  background-color: white;
+  border: 1px solid silver;
+  background-size: 100%;
+}

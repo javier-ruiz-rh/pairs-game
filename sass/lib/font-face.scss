@@ -1,0 +1,29 @@
+/**
+ * Font-face Mixin
+ * --------------------------------------
+ * Manu Morante @unavezfui
+ * Last update: February 05, 2015
+ * https://gist.github.com/manumorante/0b133a10ea2976f483ef
+ *
+ * Requires
+ * This mixin require 'Compass' to use the 'font-url' helper.
+ * You can change 'font-url()' to 'url()' to avoid it.
+ *
+ * Usage
+ * h1 {
+ *   @include font-face('Roboto','myfont/roboto');
+ * }
+ */
+@mixin font-face($family, $path: $family, $weight: normal, $style: normal){
+  @font-face {
+    font-family: $family;
+    src: font-url('#{$path}.eot');
+    src: font-url('#{$path}.eot?#iefix')        format('embedded-opentype'),
+         font-url('#{$path}.woff2')             format('woff2'),
+         font-url('#{$path}.woff')              format('woff'),
+         font-url('#{$path}.ttf')               format('truetype'),
+         font-url('#{$path}.svg##{$path}')      format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}

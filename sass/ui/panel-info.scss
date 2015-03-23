@@ -1,0 +1,49 @@
+/**
+ * Panel Info
+ */
+
+
+ @import '../lib/breakpoints';
+
+.panel-info {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  margin: -100px -140px;
+  padding: 10px;
+  width: 250px;
+  height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  border: solid 2px #ccc;
+  text-align: center;
+
+  @include at-small{
+    margin: -90px -152px;
+  }
+  @include at-medium{
+    margin: -90px -150px;
+  }
+
+  p span{
+    font-size: 35px;
+  }
+
+  h1 {
+    padding: 17px 10px;
+    font-size: 24px;
+  }
+
+  a{
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    background-color: orange;
+    text-decoration: none;
+    border-radius: 10px;
+  }
+}
+
+//
